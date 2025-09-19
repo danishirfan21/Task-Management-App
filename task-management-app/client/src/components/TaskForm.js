@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { FaTimes } from 'react-icons/fa';
 
 const TaskForm = ({ onSubmit, initialData = null, onCancel }) => {
   const [formData, setFormData] = useState({
@@ -98,9 +99,10 @@ const TaskForm = ({ onSubmit, initialData = null, onCancel }) => {
 
       <div className="flex justify-end space-x-3 pt-4">
         {onCancel && (
-          <button type="button" onClick={onCancel} className="btn-secondary">
-            Cancel
-          </button>
+            <button type="button" onClick={onCancel} className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 mr-2 flex items-center gap-2">
+              <FaTimes />
+              Cancel
+            </button>
         )}
         <button
           type="submit"
